@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EDUVIX Admin Panel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            EDUVIX
+        </div>
+
+        <div>
+            <span>Admin Panel</span>
+        </div>
+
+    </header>
+
+
+    <main class="admin-page">
+
+        <section class="hero-section">
+
+            <h1>EDUVIX Admin Panel</h1>
+
+            <p>
+                Review and manage submitted study resources.
+            </p>
+
+        </section>
+
+
+        <section class="admin-section">
+
+            <div class="admin-heading">
+
+                <div>
+                    <h2>Pending Submissions</h2>
+
+                    <p>
+                        Approve resources to make them available
+                        on EDUVIX.
+                    </p>
+                </div>
+
+                <button
+                    class="primary-btn"
+                    onclick="loadAdminNotes()">
+                    Refresh
+                </button>
+
+            </div>
+
+
+            <div id="adminNotes">
+
+                <p class="admin-loading">
+                    Loading submissions...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script type="module" src="admin.js"></script>
+
+</body>
+
+</html>

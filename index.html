@@ -1,0 +1,1414 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EDUVIX — Resources That Move You Forward</title>
+
+    <meta name="description"
+          content="EDUVIX — Free notes, study resources, PYQs, practice questions and preparation material for school and competitive exams.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+    <div class="container nav-inner">
+
+        <a href="#" class="logo"
+           onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">
+
+            <span class="logo-mark">E</span>
+            <span>EDUVIX</span>
+
+        </a>
+
+        <nav class="nav-links">
+            <a href="#school">School</a>
+            <a href="#competitive">Competitive</a>
+            <a href="#library">Library</a>
+            <a href="#publish">Publish</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-btn"
+                    id="darkModeBtn"
+                    title="Toggle dark mode">
+                🌙
+            </button>
+
+            <button class="login-btn"
+                    onclick="openLogin()">
+                Login
+            </button>
+        </div>
+
+    </div>
+</header>
+
+
+<main>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="container hero-grid">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                🚀 A smarter way to prepare
+            </div>
+
+            <h1>
+                Learn better.<br>
+                <span>Prepare smarter.</span>
+            </h1>
+
+            <p>
+                Discover notes, PYQs, practice questions, revision material
+                and study resources — all in one place.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#library"
+                   class="primary-btn">
+                    Explore Resources →
+                </a>
+
+                <button class="secondary-btn"
+                        onclick="openPublish()">
+                    Publish Notes
+                </button>
+
+            </div>
+
+            <div class="hero-mini-stats">
+
+                <div>
+                    <strong>6–12</strong>
+                    <span>Classes</span>
+                </div>
+
+                <div>
+                    <strong>15+</strong>
+                    <span>Exams</span>
+                </div>
+
+                <div>
+                    <strong>30+</strong>
+                    <span>Subjects</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image-wrap">
+
+            <div class="hero-glow"></div>
+
+            <img
+                src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=900&q=90"
+                alt="Student studying"
+                class="hero-image"
+            >
+
+            <div class="floating-card floating-card-one">
+                📚
+                <strong>Smart Resources</strong>
+                <small>Everything in one place</small>
+            </div>
+
+            <div class="floating-card floating-card-two">
+                ✓
+                <strong>Free Access</strong>
+                <small>Learn without limits</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SCHOOL ================= -->
+
+<section id="school"
+         class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                SCHOOL
+            </span>
+
+            <h2>
+                Everything for your school journey
+            </h2>
+
+            <p>
+                Find resources for Classes 6–12 across major boards and subjects.
+            </p>
+
+        </div>
+
+
+        <div class="board-grid">
+
+            <div class="board-card"
+                 onclick="selectBoard('CBSE')">
+
+                <div class="board-icon">
+                    📘
+                </div>
+
+                <h3>
+                    CBSE
+                </h3>
+
+                <p>
+                    Classes 6–12
+                </p>
+
+            </div>
+
+
+            <div class="board-card"
+                 onclick="selectBoard('ICSE')">
+
+                <div class="board-icon">
+                    📗
+                </div>
+
+                <h3>
+                    ICSE
+                </h3>
+
+                <p>
+                    Classes 6–12
+                </p>
+
+            </div>
+
+
+            <div class="board-card"
+                 onclick="selectBoard('State Boards')">
+
+                <div class="board-icon">
+                    📙
+                </div>
+
+                <h3>
+                    State Boards
+                </h3>
+
+                <p>
+                    Multiple states
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <h3 class="sub-heading">
+            Choose your class
+        </h3>
+
+
+        <div class="class-grid">
+
+            <button onclick="chooseClass('6')">
+                Class 6
+            </button>
+
+            <button onclick="chooseClass('7')">
+                Class 7
+            </button>
+
+            <button onclick="chooseClass('8')">
+                Class 8
+            </button>
+
+            <button onclick="chooseClass('9')">
+                Class 9
+            </button>
+
+            <button onclick="chooseClass('10')">
+                Class 10
+            </button>
+
+            <button onclick="chooseClass('11')">
+                Class 11
+            </button>
+
+            <button onclick="chooseClass('12')">
+                Class 12
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SCHOOL SUBJECTS ================= -->
+
+<section class="section section-alt">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                SUBJECTS
+            </span>
+
+            <h2>
+                School subjects
+            </h2>
+
+            <p>
+                From languages and sciences to commerce, humanities and technology.
+            </p>
+
+        </div>
+
+
+        <div class="subject-grid">
+
+            <button onclick="chooseSubject('Mathematics')">
+                📐 Mathematics
+            </button>
+
+            <button onclick="chooseSubject('Applied Mathematics')">
+                📊 Applied Mathematics
+            </button>
+
+            <button onclick="chooseSubject('Science')">
+                🔬 Science
+            </button>
+
+            <button onclick="chooseSubject('Physics')">
+                ⚛️ Physics
+            </button>
+
+            <button onclick="chooseSubject('Chemistry')">
+                🧪 Chemistry
+            </button>
+
+            <button onclick="chooseSubject('Biology')">
+                🧬 Biology
+            </button>
+
+
+            <button onclick="chooseSubject('English')">
+                📖 English
+            </button>
+
+            <button onclick="chooseSubject('Hindi')">
+                📝 Hindi
+            </button>
+
+            <button onclick="chooseSubject('Punjabi')">
+                🪶 Punjabi
+            </button>
+
+            <button onclick="chooseSubject('Sanskrit')">
+                📜 Sanskrit
+            </button>
+
+            <button onclick="chooseSubject('Urdu')">
+                ✍️ Urdu
+            </button>
+
+            <button onclick="chooseSubject('French')">
+                🇫🇷 French
+            </button>
+
+
+            <button onclick="chooseSubject('History')">
+                🏛️ History
+            </button>
+
+            <button onclick="chooseSubject('Geography')">
+                🌍 Geography
+            </button>
+
+            <button onclick="chooseSubject('Political Science')">
+                🏛️ Political Science
+            </button>
+
+            <button onclick="chooseSubject('Civics')">
+                ⚖️ Civics
+            </button>
+
+            <button onclick="chooseSubject('Economics')">
+                💰 Economics
+            </button>
+
+            <button onclick="chooseSubject('Social Science')">
+                🌐 Social Science
+            </button>
+
+
+            <button onclick="chooseSubject('Computer Science')">
+                💻 Computer Science
+            </button>
+
+            <button onclick="chooseSubject('Information Technology')">
+                🖥️ Information Technology
+            </button>
+
+            <button onclick="chooseSubject('Artificial Intelligence')">
+                🤖 Artificial Intelligence
+            </button>
+
+            <button onclick="chooseSubject('Data Science')">
+                📈 Data Science
+            </button>
+
+
+            <button onclick="chooseSubject('Accountancy')">
+                🧾 Accountancy
+            </button>
+
+            <button onclick="chooseSubject('Business Studies')">
+                💼 Business Studies
+            </button>
+
+            <button onclick="chooseSubject('Entrepreneurship')">
+                🚀 Entrepreneurship
+            </button>
+
+
+            <button onclick="chooseSubject('Psychology')">
+                🧠 Psychology
+            </button>
+
+            <button onclick="chooseSubject('Sociology')">
+                👥 Sociology
+            </button>
+
+            <button onclick="chooseSubject('Legal Studies')">
+                ⚖️ Legal Studies
+            </button>
+
+            <button onclick="chooseSubject('Physical Education')">
+                🏃 Physical Education
+            </button>
+
+            <button onclick="chooseSubject('Fine Arts')">
+                🎨 Fine Arts
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COMPETITIVE EXAMS ================= -->
+
+<section id="competitive"
+         class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                COMPETITIVE EXAMS
+            </span>
+
+            <h2>
+                Prepare for what comes next
+            </h2>
+
+            <p>
+                Resources for major entrance, government, defence and professional exams.
+            </p>
+
+        </div>
+
+
+        <div class="exam-grid">
+
+            <button onclick="chooseExam('JEE')">
+                JEE
+            </button>
+
+            <button onclick="chooseExam('NEET')">
+                NEET
+            </button>
+
+            <button onclick="chooseExam('CUET')">
+                CUET
+            </button>
+
+            <button onclick="chooseExam('UPSC')">
+                UPSC
+            </button>
+
+            <button onclick="chooseExam('SSC')">
+                SSC
+            </button>
+
+            <button onclick="chooseExam('Banking')">
+                Banking
+            </button>
+
+            <button onclick="chooseExam('Railway')">
+                Railway
+            </button>
+
+            <button onclick="chooseExam('NDA')">
+                NDA
+            </button>
+
+            <button onclick="chooseExam('CDS')">
+                CDS
+            </button>
+
+            <button onclick="chooseExam('CLAT')">
+                CLAT
+            </button>
+
+            <button onclick="chooseExam('CAT')">
+                CAT
+            </button>
+
+            <button onclick="chooseExam('Olympiads')">
+                Olympiads
+            </button>
+
+            <button onclick="chooseExam('State Exams')">
+                State Exams
+            </button>
+
+            <button onclick="chooseExam('Teaching')">
+                Teaching
+            </button>
+
+            <button onclick="chooseExam('Defence')">
+                Defence
+            </button>
+
+            <button onclick="chooseExam('Other Exams')">
+                Other Exams
+            </button>
+
+        </div>
+
+
+        <h3 class="sub-heading">
+            Competitive subjects
+        </h3>
+
+
+        <div class="subject-grid competitive-subjects">
+
+            <button onclick="chooseSubject('Physics')">
+                ⚛️ Physics
+            </button>
+
+            <button onclick="chooseSubject('Chemistry')">
+                🧪 Chemistry
+            </button>
+
+            <button onclick="chooseSubject('Biology')">
+                🧬 Biology
+            </button>
+
+            <button onclick="chooseSubject('Mathematics')">
+                📐 Mathematics
+            </button>
+
+            <button onclick="chooseSubject('Reasoning')">
+                🧩 Reasoning
+            </button>
+
+            <button onclick="chooseSubject('General Knowledge')">
+                🌎 General Knowledge
+            </button>
+
+            <button onclick="chooseSubject('Current Affairs')">
+                📰 Current Affairs
+            </button>
+
+            <button onclick="chooseSubject('Quantitative Aptitude')">
+                🔢 Quantitative Aptitude
+            </button>
+
+            <button onclick="chooseSubject('General Science')">
+                🔬 General Science
+            </button>
+
+            <button onclick="chooseSubject('Legal Reasoning')">
+                ⚖️ Legal Reasoning
+            </button>
+
+            <button onclick="chooseSubject('Verbal Ability')">
+                🗣️ Verbal Ability
+            </button>
+
+            <button onclick="chooseSubject('Logical Reasoning')">
+                🧠 Logical Reasoning
+            </button>
+
+            <button onclick="chooseSubject('English')">
+                📖 English
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LIBRARY ================= -->
+
+<section id="library"
+         class="library-section">
+
+    <div class="container">
+
+        <div class="library-header">
+
+            <div>
+
+                <span class="section-label">
+                    EDUVIX LIBRARY
+                </span>
+
+                <h2>
+                    Find the right resource
+                </h2>
+
+                <p>
+                    Search through notes, questions, PYQs, worksheets and more.
+                </p>
+
+            </div>
+
+
+            <div class="result-count">
+
+                <strong id="resultCount">
+                    0
+                </strong>
+
+                resources
+
+            </div>
+
+        </div>
+
+
+        <div class="filter-box">
+
+            <div class="search-wrapper">
+
+                🔍
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search notes, chapters, topics..."
+                >
+
+            </div>
+
+
+            <select id="categoryFilter">
+
+                <option value="">
+                    All Categories
+                </option>
+
+                <option value="School">
+                    School
+                </option>
+
+                <option value="Competitive">
+                    Competitive
+                </option>
+
+            </select>
+
+
+            <select id="classFilter">
+
+                <option value="">
+                    All Classes
+                </option>
+
+                <option value="6">Class 6</option>
+                <option value="7">Class 7</option>
+                <option value="8">Class 8</option>
+                <option value="9">Class 9</option>
+                <option value="10">Class 10</option>
+                <option value="11">Class 11</option>
+                <option value="12">Class 12</option>
+
+            </select>
+
+
+            <select id="examFilter">
+
+                <option value="">
+                    All Exams
+                </option>
+
+                <option value="JEE">JEE</option>
+                <option value="NEET">NEET</option>
+                <option value="CUET">CUET</option>
+                <option value="UPSC">UPSC</option>
+                <option value="SSC">SSC</option>
+                <option value="Banking">Banking</option>
+                <option value="Railway">Railway</option>
+                <option value="NDA">NDA</option>
+                <option value="CDS">CDS</option>
+                <option value="CLAT">CLAT</option>
+                <option value="CAT">CAT</option>
+                <option value="Olympiads">Olympiads</option>
+                <option value="State Exams">State Exams</option>
+                <option value="Teaching">Teaching</option>
+                <option value="Defence">Defence</option>
+                <option value="Other Exams">Other Exams</option>
+
+            </select>
+
+
+            <select id="subjectFilter">
+
+                <option value="">
+                    All Subjects
+                </option>
+
+            </select>
+
+
+            <select id="typeFilter">
+
+                <option value="">
+                    All Materials
+                </option>
+
+                <option value="Complete Notes">Complete Notes</option>
+                <option value="Revision Notes">Revision Notes</option>
+                <option value="Short Notes">Short Notes</option>
+                <option value="Important Questions">Important Questions</option>
+                <option value="PYQs">PYQs</option>
+                <option value="Competency Questions">Competency Questions</option>
+                <option value="Practice Questions">Practice Questions</option>
+                <option value="Mock Tests">Mock Tests</option>
+                <option value="Worksheets">Worksheets</option>
+                <option value="Mind Maps">Mind Maps</option>
+                <option value="Formula Sheets">Formula Sheets</option>
+                <option value="Sample Papers">Sample Papers</option>
+                <option value="Picture-Based Questions">Picture-Based Questions</option>
+                <option value="Question Banks">Question Banks</option>
+                <option value="Flashcards">Flashcards</option>
+
+            </select>
+
+
+            <button class="clear-btn"
+                    onclick="clearFilters()">
+
+                Clear
+
+            </button>
+
+        </div>
+
+
+        <div id="notesGrid"
+             class="notes-grid">
+        </div>
+
+
+        <div id="noResults"
+             class="no-results"
+             style="display:none;">
+
+            <div>📚</div>
+
+            <h3>
+                No resources found
+            </h3>
+
+            <p>
+                Try changing your filters or search terms.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MATERIAL TYPES ================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                RESOURCES
+            </span>
+
+            <h2>
+                Whatever you need to prepare
+            </h2>
+
+        </div>
+
+
+        <div class="material-grid">
+
+            <div class="material-card">
+
+                <span>📚</span>
+
+                <h3>
+                    Complete Notes
+                </h3>
+
+                <p>
+                    Detailed chapter-wise study material.
+                </p>
+
+            </div>
+
+
+            <div class="material-card">
+
+                <span>⚡</span>
+
+                <h3>
+                    Revision Notes
+                </h3>
+
+                <p>
+                    Quick revision before your exam.
+                </p>
+
+            </div>
+
+
+            <div class="material-card">
+
+                <span>🎯</span>
+
+                <h3>
+                    Important Questions
+                </h3>
+
+                <p>
+                    Focus on high-value questions.
+                </p>
+
+            </div>
+
+
+            <div class="material-card">
+
+                <span>📄</span>
+
+                <h3>
+                    PYQs
+                </h3>
+
+                <p>
+                    Practice questions from previous exams.
+                </p>
+
+            </div>
+
+
+            <div class="material-card">
+
+                <span>🧠</span>
+
+                <h3>
+                    Mind Maps
+                </h3>
+
+                <p>
+                    Understand concepts visually.
+                </p>
+
+            </div>
+
+
+            <div class="material-card">
+
+                <span>📝</span>
+
+                <h3>
+                    Mock Tests
+                </h3>
+
+                <p>
+                    Test yourself before the real exam.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PUBLISH ================= -->
+
+<section id="publish"
+         class="publish-section">
+
+    <div class="container publish-grid">
+
+        <div>
+
+            <span class="section-label">
+                CONTRIBUTE
+            </span>
+
+            <h2>
+                Have useful study material?
+            </h2>
+
+            <p>
+                Share your notes with students everywhere.
+                Upload your resources and help someone prepare better.
+            </p>
+
+            <button class="primary-btn"
+                    onclick="openPublish()">
+
+                Publish Your Notes →
+
+            </button>
+
+        </div>
+
+
+        <div class="publish-card">
+
+            <div class="publish-icon">
+                📤
+            </div>
+
+            <h3>
+                Share. Help. Grow.
+            </h3>
+
+            <p>
+                Every useful resource can make someone's preparation easier.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STUDY TIP ================= -->
+
+<section class="tip-section">
+
+    <div class="container">
+
+        <div class="tip-card">
+
+            <span>
+                💡
+            </span>
+
+            <div>
+
+                <small>
+                    EDUVIX STUDY TIP
+                </small>
+
+                <h3 id="studyTip">
+                    Consistency beats last-minute preparation.
+                </h3>
+
+            </div>
+
+            <button onclick="newStudyTip()">
+                Next tip →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <div class="logo footer-logo">
+
+                <span class="logo-mark">
+                    E
+                </span>
+
+                <span>
+                    EDUVIX
+                </span>
+
+            </div>
+
+            <p>
+                Resources that move you forward.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="#school">
+                School
+            </a>
+
+            <a href="#competitive">
+                Competitive Exams
+            </a>
+
+            <a href="#library">
+                Library
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Contribute
+            </h4>
+
+            <a href="#publish">
+                Publish Notes
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 EDUVIX. All rights reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- ================= NOTE MODAL ================= -->
+
+<div id="noteModal"
+     class="modal">
+
+    <div class="modal-content note-modal-content">
+
+        <button class="modal-close"
+                onclick="closeModal('noteModal')">
+
+            ×
+
+        </button>
+
+        <div id="noteModalBody"></div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= LOGIN MODAL ================= -->
+
+<div id="loginModal"
+     class="modal">
+
+    <div class="modal-content">
+
+        <button class="modal-close"
+                onclick="closeModal('loginModal')">
+
+            ×
+
+        </button>
+
+        <h2>
+            Welcome to EDUVIX
+        </h2>
+
+        <p>
+            Login to manage your resources and contributions.
+        </p>
+
+
+        <form id="loginForm">
+
+            <input
+                type="email"
+                placeholder="Email address"
+                required
+            >
+
+            <input
+                type="password"
+                placeholder="Password"
+                required
+            >
+
+            <button
+                class="primary-btn"
+                type="submit">
+
+                Login
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ================= PUBLISH MODAL ================= -->
+
+<div id="publishModal"
+     class="modal">
+
+    <div class="modal-content publish-modal-content">
+
+        <button class="modal-close"
+                onclick="closeModal('publishModal')">
+
+            ×
+
+        </button>
+
+
+        <h2>
+            Publish on EDUVIX
+        </h2>
+
+        <p>
+            Submit your study material.
+            It will be reviewed before being published.
+        </p>
+
+
+        <form id="publishForm">
+
+
+            <label>
+                Resource Category
+            </label>
+
+            <select id="publishCategory"
+                    required>
+
+                <option value="">
+                    Select category
+                </option>
+
+                <option value="School">
+                    School
+                </option>
+
+                <option value="Competitive">
+                    Competitive Exam
+                </option>
+
+            </select>
+
+
+            <div id="schoolPublishFields">
+
+                <label>
+                    Board
+                </label>
+
+                <select id="publishBoard">
+
+                    <option value="">
+                        Select board
+                    </option>
+
+                    <option value="CBSE">
+                        CBSE
+                    </option>
+
+                    <option value="ICSE">
+                        ICSE
+                    </option>
+
+                    <option value="State Boards">
+                        State Boards
+                    </option>
+
+                </select>
+
+
+                <label>
+                    Class
+                </label>
+
+                <select id="publishClass">
+
+                    <option value="">
+                        Select class
+                    </option>
+
+                    <option value="6">Class 6</option>
+                    <option value="7">Class 7</option>
+                    <option value="8">Class 8</option>
+                    <option value="9">Class 9</option>
+                    <option value="10">Class 10</option>
+                    <option value="11">Class 11</option>
+                    <option value="12">Class 12</option>
+
+                </select>
+
+            </div>
+
+
+            <div id="competitivePublishFields">
+
+                <label>
+                    Competitive Exam
+                </label>
+
+                <select id="publishExam">
+
+                    <option value="">
+                        Select exam
+                    </option>
+
+                    <option value="JEE">JEE</option>
+                    <option value="NEET">NEET</option>
+                    <option value="CUET">CUET</option>
+                    <option value="UPSC">UPSC</option>
+                    <option value="SSC">SSC</option>
+                    <option value="Banking">Banking</option>
+                    <option value="Railway">Railway</option>
+                    <option value="NDA">NDA</option>
+                    <option value="CDS">CDS</option>
+                    <option value="CLAT">CLAT</option>
+                    <option value="CAT">CAT</option>
+                    <option value="Olympiads">Olympiads</option>
+                    <option value="State Exams">State Exams</option>
+                    <option value="Teaching">Teaching</option>
+                    <option value="Defence">Defence</option>
+                    <option value="Other Exams">Other Exams</option>
+
+                </select>
+
+            </div>
+
+
+            <label>
+                Subject
+            </label>
+
+            <select id="publishSubject"
+                    required>
+
+                <option value="">
+                    Select subject
+                </option>
+
+            </select>
+
+
+            <label>
+                Chapter / Topic
+            </label>
+
+            <input
+                type="text"
+                id="publishTopic"
+                placeholder="Example: Life Processes"
+                required
+            >
+
+
+            <label>
+                Material Type
+            </label>
+
+            <select id="publishType"
+                    required>
+
+                <option value="">
+                    Select material type
+                </option>
+
+                <option value="Complete Notes">
+                    Complete Notes
+                </option>
+
+                <option value="Revision Notes">
+                    Revision Notes
+                </option>
+
+                <option value="Short Notes">
+                    Short Notes
+                </option>
+
+                <option value="Important Questions">
+                    Important Questions
+                </option>
+
+                <option value="PYQs">
+                    PYQs
+                </option>
+
+                <option value="Competency Questions">
+                    Competency Questions
+                </option>
+
+                <option value="Practice Questions">
+                    Practice Questions
+                </option>
+
+                <option value="Mock Tests">
+                    Mock Tests
+                </option>
+
+                <option value="Worksheets">
+                    Worksheets
+                </option>
+
+                <option value="Mind Maps">
+                    Mind Maps
+                </option>
+
+                <option value="Formula Sheets">
+                    Formula Sheets
+                </option>
+
+                <option value="Sample Papers">
+                    Sample Papers
+                </option>
+
+                <option value="Picture-Based Questions">
+                    Picture-Based Questions
+                </option>
+
+                <option value="Question Banks">
+                    Question Banks
+                </option>
+
+                <option value="Flashcards">
+                    Flashcards
+                </option>
+
+            </select>
+
+
+            <label>
+                Title
+            </label>
+
+            <input
+                type="text"
+                id="publishTitle"
+                placeholder="Resource title"
+                required
+            >
+
+
+            <label>
+                Description
+            </label>
+
+            <textarea
+                id="publishDescription"
+                placeholder="Briefly describe your resource..."
+                rows="4">
+            </textarea>
+
+
+            <label>
+                PDF File
+            </label>
+
+            <input
+                type="file"
+                id="publishPDF"
+                accept=".pdf,application/pdf"
+                required
+            >
+
+
+            <button
+                class="primary-btn"
+                type="submit">
+
+                Submit for Review →
+
+            </button>
+
+
+            <small class="form-note">
+                Your upload will be reviewed before appearing publicly.
+            </small>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
+```
